@@ -16,12 +16,11 @@ int main(void)
 
     // Calculate the first two digits before entering the Luhn's Algorithm validation loop
     int first_two_digits = 0;
-    while (original_card_number > 0)
+    while (original_card_number >= 100)
     {
-        first_two_digits = original_card_number;
-        original_card_number /= 10;
-        original_card_number /= 10; // Move two digits at a time
+        original_card_number /= 10; // Move one digit at a time
     }
+    first_two_digits = original_card_number;
 
     // Reset original_card_number for Luhn's Algorithm validation
     original_card_number = card_number;
@@ -58,7 +57,7 @@ int main(void)
     if (sum % 10 == 0)
     {
         // Determine the type of credit card based on its length and starting digits
-        if ((length == 15) && ((first_two_digits == 34) || (first_two_digits == 37)))
+        if (length == 15 && (first_two_digits == 34 || first_two_digits == 37))
         {
             printf("AMEX\n");
         }
