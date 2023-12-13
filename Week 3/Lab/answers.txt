@@ -1,0 +1,11 @@
+sort1 uses: Bubble
+
+How do you know?: I used time ./sort1 ... to run sort1 on multiple .txt files which were provided to me and found that sort1 has the slowest time
+
+sort2 uses: Merge
+
+How do you know?: I used time ./sort2 ... to run sort2 on multiple .txt files which were provided to me and found that sort2 has the fastest time
+
+sort3 uses: Selection
+
+How do you know?: I used time ./sort3 ... to run sort3 on multiple .txt files which were provided to me and found that sort3 has the second fastest time
